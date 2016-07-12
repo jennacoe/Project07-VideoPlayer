@@ -1,0 +1,7 @@
+#videoplayer { width: 550px;color: #fff;}
+#video { max-width: 100%; }
+#controlbar { background-color: #333; padding: 10px 10px 20px; }
+#progressbar { width: 100%; margin-bottom: 15px; }
+#playpausebtn { background: url(../icons/play-icon.png) no-repeat center center; border: none; width: 22px; height: 26px; cursor: pointer; margin: 0 15px; }
+#mutebtn { background: url(../icons/volume-on-icon.png) no-repeat center center; border: none; width: 22px; height: 22px; cursor: pointer; float: right; }
+#fullscreenbtn { background: url(../icons/fullscreen-icon.png) no-repeat center center; border: none; width: 22px; height: 22px; cursor: pointer; float: right; margin: 0 15px; }
