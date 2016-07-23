@@ -1,26 +1,6 @@
 var vid = $("#video")[0];
 var timedrag = false;
 
-function clearColor(){
-	$(".sentence").css("color","black");
-}
-
-function updatebar(x) {
-	var progress = $("#progressbar");
-	var position = x - progress.offset().left;
-	var percentage = 100 * position / progress.width();
-
-	if(percentage > 100) {
-		percentage = 100;
-	}
-	if(percentage < 0) {
-		percentage = 0;
-	}
-
-	$("#timebar").css("width",percentage+"%");
-	vid.currentTime = vid.duration * percentage / 100;
-}
-
 $("#videoplayer").hover(
 	function(){
 		$("#controls").css("opacity","1");
@@ -64,6 +44,10 @@ $("#fullscreenbtn").click(
 			vid.mozRequestFullScreen();
 		}
 });
+
+function clearColor(){
+	$(".sentence").css("color","black");
+}
 
 $("#video").on("timeupdate",function(){
     var curmins = Math.floor(vid.currentTime / 60);
@@ -124,7 +108,21 @@ $("#progressbar").mousemove(function(e) {
 	}
 });
 
+function updatebar(x) {
+	var progress = $("#progressbar");
+	var position = x - progress.offset().left;
+	var percentage = 100 * position / progress.width();
 
+	if(percentage > 100) {
+		percentage = 100;
+	}
+	if(percentage < 0) {
+		percentage = 0;
+	}
+
+	$("#timebar").css("width",percentage+"%");
+	vid.currentTime = vid.duration * percentage / 100;
+}
 
 
 
